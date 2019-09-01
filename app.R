@@ -4,13 +4,17 @@ library(tidyverse)
 library(networkD3)
 library(RCurl)
 
-#setwd("C:/Users/YoonJoung Choi/Dropbox/0 Project/FPDynamicsDiagram_Shiny")
-#dta <- as.data.frame(read.csv("https://docs.google.com/spreadsheets/d/15RJWnbexYjfZ8ZzeMppC4wxhx9Ck1sEHUBKSPVIoI1g/", header=TRUE))
+# Monthly database update: 
+# 1. Knit "FPDynamicsDiagram_MultipleCountries.rmd" in "C:\Users\YoonJoung Choi\Dropbox\0 Project\FPDynamicsDiagram"
+# 2. upload "DHSAPI_discontinuation.csv" to gitup
+
 dta <- read.csv("https://raw.githubusercontent.com/yoonjoung/FPDynamicsDiagram_Shiny/master/DHSAPI_discontinuation.csv")
 table(dta$country)  
 countrylist<-unique(as.vector(dta$country))
 
 dta<-arrange(dta, surveyid, order)
+
+#setwd("C:/Users/YoonJoung Choi/Dropbox/0 Project/FPDynamicsDiagram_Shiny")
 
 #******************************
 # 1. USER INTERFACE 
@@ -51,29 +55,32 @@ ui<-fluidPage(
             h5("Overall, most episodes continued for 12 months since beginning of the use."), 
             h5("Meanwhile, some episodes discontinued. The percent discontinuation out of all use episodes is:"),
             verbatimTextOutput("dis"),
-            h5("Broadly there are three types of discontinuation (red, orange, and red boxes):"),  
-            h5("- discontinuation because of no more need for family planning (e.g., wanting to get pregnant)",strong("(yellow)."),"Percent of discontinuation due to this reason is:"),  
+            h5("Broadly there are three types of discontinuation (yellow, orange, and red boxes):"),  
+            h5("-- discontinuation because of no more need for family planning (e.g., wanting to get pregnant)",strong("(yellow)."),"Percent of discontinuation due to this reason is:"),  
             verbatimTextOutput("disnotinneed"),
-            h5("- discontinuation while there still was need for contraception",strong("(orange)."),"Percent of discontinuation due to this reason is:"),
+            h5("-- discontinuation while there still was need for contraception",strong("(orange)."),"Percent of discontinuation due to this reason is:"),
             verbatimTextOutput("disinneed"),
-            h5("- discontinuation due to method failure",strong("(red)."),"Percent of discontinuation due to this reason is:"),
+            h5("-- discontinuation due to method failure",strong("(red)."),"Percent of discontinuation due to this reason is:"),
             verbatimTextOutput("disfailure"),
             h5("By individual method, there was higher discontinuation among short-acting methods than among long-acting methods."),  
     
             hr(),
             h5("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData")),
-            
+            h5("For questions or bugs, please", a("contact me.", href="https://www.isquared.global/")),
+
             hr(),
             h6("Footnote on the figure:"),
             h6("1. Right side looks longer only because of more number of categories, and total height is same between source and target."),   
             h6("2. Caution: the flow/chord thickness is nearly impossible to differentiate the volume when it is low. For small volume flow, refer to the table,",strong("'Twelve-month contraceptive discontinuation rates'"),", in the survey's final report."),
             
+            hr(),
             h6("Footnote on the data:"),        
-            h6("1. Source: Estimated discontinuation rates from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the final report table.","Last updated on:",as.Date(Sys.time(	), format='%d%b%Y')),  
+            h6("1. Source: Estimated discontinuation rates from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the final report table.","Last updated on: September 1, 2019"),  
             h6("2. The data are at the episode level, and, thus, the distribution on the leftside is NOT the 'method mix' distribution."),
             h6("3. In the figures, discontinuation refers to 'not using any methods' and thus excludes switching episodes."),   
             h6("4. Discontinuation is split into three groups: Discontinuation while 'not in need' vs. 'discontinuation while in need' vs. 'discontinuation due to method failure'. 'Not in need' includes two reasons: desire to become pregnant, and other fertility related reasons (e.g., infrequent sex/husband away, difficult to get pregnant/menopausal, and marital dissolution/separation). In addition, it is assumed, for this exercise, that all who discontinued because they wanted more effective methods indeed switched to another method."), 
-            h6("5. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Actual distribution of switching can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/"))
+            h6("5. Sum of percentage across three discontinuation types may not be 100, due to rounding"),
+            h6("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Actual distribution of switching can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/"))
         )
     )    
 )
