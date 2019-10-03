@@ -4,25 +4,182 @@ library(tidyverse)
 library(networkD3)
 library(RCurl)
 
-# Monthly database update: 
-# 1. Knit "FPDynamicsDiagram_MultipleCountries.rmd" in "C:\Users\YoonJoung Choi\Dropbox\0 Project\FPDynamicsDiagram"
-# 2. upload "DHSAPI_discontinuation.csv" to gitup
-
 date<-as.Date(Sys.time(	), format='%d%b%Y')
 
-dta <- read.csv("https://raw.githubusercontent.com/yoonjoung/FPDynamicsDiagram_Shiny/master/DHSAPI_discontinuation.csv")
-table(dta$country)  
+# There are three parts in this document:
+# 0. Database update: tidying data for the app
+# 1. USER INTERFACE 
+# 2. SERVER
+
+#******************************
+# 0. Database update 
+#******************************
+
+# First, knit "FPDynamicsDiagram_callAPI.rmd" in the folder which creates "dtaapi.csv" 
+#dtaapi <- read.csv("https://github.com/yoonjoung/FPDynamicsDiagram_Shiny/blob/master/dtaapi.csv")
+dtaapi <- read.csv("dtaapi.csv")
+
+# 1. rename var and tidy var names
+dtaall<-dtaapi %>%
+    rename ( xprg=	FP_DISR_W_PRG) %>%
+    rename ( xdes=	FP_DISR_W_DES) %>%
+    rename ( xfrt=	FP_DISR_W_FRT) %>%
+    rename ( xsid=	FP_DISR_W_SID) %>%
+    rename ( xwme=	FP_DISR_W_WME) %>%
+    rename ( xmet=	FP_DISR_W_MET) %>%
+    rename ( xoth=	FP_DISR_W_OTH) %>%
+    rename ( xany=	FP_DISR_W_ANY) %>%
+    rename ( xswh=	FP_DISR_W_SWH) %>%
+    rename ( denom=	FP_DISR_W_NUM) %>%
+    rename (country	=	CountryName) %>%
+    rename (group	=	CharacteristicCategory) %>% 
+    rename (grouplabel	=	CharacteristicLabel) 
+colnames(dtaall)<-tolower(names(dtaall))
+
+# 2. keep only estimates by contraceptive methods (drop the total row)
+dtaall<-dtaall %>% filter(group=="Contraceptive method") 
+
+# 3. create effectiveness order and sort by it
+dtaall<-dtaall %>% mutate(
+    order=0,
+    order= ifelse(grouplabel == "Male sterilization",1, order),
+    order= ifelse(grouplabel == "Female sterilization",2, order),
+    order= ifelse(grouplabel == "IUD",3, order),
+    order= ifelse(grouplabel == "Implants",4, order),
+    order= ifelse(grouplabel == "Injectables",5, order),
+    order= ifelse(grouplabel == "Pill",6, order),
+    order= ifelse(grouplabel == "Condom",7, order),
+    order= ifelse(grouplabel == "Female condom",8, order),
+    order= ifelse(grouplabel == "Lactational amenorrhea",9, order),
+    order= ifelse(grouplabel == "Emergency contraception",10, order),
+    order= ifelse(grouplabel == "Other modern methods",11, order),
+    order= ifelse(grouplabel == "Periodic abstinence",12, order),
+    order= ifelse(grouplabel == "Withdrawal",13, order),
+    order= ifelse(grouplabel == "Other traditional methods",14, order),
+    
+    zzmodern=0, 
+    zzmodern=ifelse(order>=1 & order<=11,1, zzmodern),
+    zztraditional=0,
+    zztraditional=ifelse(order>=12 & order<=14,1, zztraditional)) 
+
+# 4. create type and survey year variables
+dtaall<-dtaall %>% 
+    mutate(
+    	year=as.numeric(substr(surveyid,3,6)), 
+    	type=substr(surveyid,7,9)) %>%
+    filter(type=="DHS") 
+
+# 5. identify and keep the latest survey year per country 
+dta<-dtaall %>% 
+    group_by(country) %>% 
+    mutate(maxyear = max(year)) %>%
+    filter(year==maxyear) 
+    
+# 6. GENERALIZE the dataframe so that the below diagram code works for all surveys
+dta<-dta %>%
+
+    # Keep sure only rows with non-missing reasons 
+    filter(is.na(xany)==FALSE) %>%
+
+    # count the number of methods per survey 
+    group_by(surveyid) %>% 
+    mutate(
+        nummethods = n(),
+        nummodern=sum(zzmodern),
+        numtraditional=sum(zztraditional)) %>% 
+
+    mutate (
+        # Calculate number of episodes disoncinuted 
+        Discontinuation=denom*(xany-xswh)/100,
+        DiscontinuationNotInNeed=denom*(xdes+xfrt)/100,
+        DiscontinuationFailure=denom*(xprg)/100,
+        DiscontinuationInNeed=Discontinuation - DiscontinuationNotInNeed - DiscontinuationFailure,
+        
+        # Calculate number of episodes switched To each method 
+        MaleSterilization =((denom*xswh/100) / (nummethods-1) ),
+        FemaleSterilization =((denom*xswh/100) / (nummethods-1) ),
+        IUD =((denom*xswh/100) / (nummethods-1) ),
+        Implants =((denom*xswh/100) / (nummethods-1) ),
+        Injectables =((denom*xswh/100) / (nummethods-1) ),
+        Pill =((denom*xswh/100) / (nummethods-1) ),
+        Condom =((denom*xswh/100) / (nummethods-1) ),
+        FemaleCondom =((denom*xswh/100) / (nummethods-1) ),
+        LAM =((denom*xswh/100) / (nummethods-1) ),
+        EC =((denom*xswh/100) / (nummethods-1) ),
+        OtherModern =((denom*xswh/100) / (nummethods-1) ),
+        Rhythm =((denom*xswh/100) / (nummethods-1) ),
+        Withdrawal =((denom*xswh/100) / (nummethods-1) ),
+        OtherTraditional =((denom*xswh/100) / (nummethods-1) ), 
+
+        # Calculate number of episodes continued
+        continue=denom*(100-xany)/100,
+        MaleSterilization= ifelse(order==1,continue, MaleSterilization),
+        FemaleSterilization= ifelse(order==2,continue, FemaleSterilization),
+        IUD= ifelse(order==3, continue, IUD),
+        Implants= ifelse(order==4, continue, Implants),
+        Injectables= ifelse(order==5, continue, Injectables),
+        Pill= ifelse(order==6, continue, Pill),
+        Condom= ifelse(order==7, continue, Condom),
+        FemaleCondom= ifelse(order==8, continue, FemaleCondom),
+        LAM= ifelse(order==9, continue, LAM),
+        EC= ifelse(order==10, continue, EC),
+        OtherModern= ifelse(order==11, continue, OtherModern),
+        Rhythm= ifelse(order==12, continue, Rhythm),
+        Withdrawal= ifelse(order==13, continue, Withdrawal),
+        OtherTraditional= ifelse(order==14, continue, OtherTraditional) ) %>%
+    
+    group_by (surveyid) %>%   
+    mutate (
+        # check if the method is included by each survey 
+        ifMaleSterilization= (1 %in% order),
+        ifFemaleSterilization= (2 %in% order),
+        ifIUD= (3 %in% order),
+        ifImplants= (4 %in% order),
+        ifInjectables= (5 %in% order),
+        ifPill= (6 %in% order),
+        ifCondom= (7 %in% order),
+        ifFemaleCondom= (8 %in% order),
+        ifLAM= (9 %in% order),
+        ifEC= (10 %in% order),
+        ifOtherModern= (11 %in% order),
+        ifRhythm= (12 %in% order),
+        ifWithdrawal= (13 %in% order),
+        ifOtherTraditional= (14 %in% order)) %>%    
+    
+    mutate (    
+        #recode to 0 for methods that do not exist in the survey 
+        MaleSterilization= ifelse(ifMaleSterilization==FALSE,0, MaleSterilization),
+        FemaleSterilization= ifelse(ifFemaleSterilization==FALSE,0, FemaleSterilization),
+        IUD= ifelse(ifIUD==FALSE,0, IUD),
+        Implants= ifelse(ifImplants==FALSE,0, Implants),
+        Injectables= ifelse(ifInjectables==FALSE,0, Injectables),
+        Pill= ifelse(ifPill==FALSE,0, Pill),
+        Condom= ifelse(ifCondom==FALSE,0, Condom),
+        FemaleCondom= ifelse(ifFemaleCondom==FALSE,0, FemaleCondom),
+        LAM= ifelse(ifLAM==FALSE,0, LAM),
+        EC= ifelse(ifEC==FALSE,0, EC),
+        OtherModern= ifelse(ifOtherModern==FALSE,0, OtherModern),
+        Rhythm= ifelse(ifRhythm==FALSE,0, Rhythm),
+        Withdrawal= ifelse(ifWithdrawal==FALSE,0, Withdrawal),
+        OtherTraditional= ifelse(ifOtherTraditional==FALSE,0, OtherTraditional),
+
+        # check if test==denom
+        test=DiscontinuationNotInNeed+DiscontinuationInNeed+DiscontinuationFailure+MaleSterilization+FemaleSterilization+IUD+Implants+Injectables+Pill+Condom+FemaleCondom+LAM+EC+OtherModern+Rhythm+Withdrawal+OtherTraditional,
+        confirm=test-denom ) %>%
+
+    mutate_if(is.numeric, round, 1) %>%
+    ungroup(dta) 
+
 dta<-arrange(dta, country, order)
-
 countrylist<-unique(as.vector(dta$country))
-
-#setwd("C:/Users/YoonJoung Choi/Dropbox/0 Project/FPDynamicsDiagram_Shiny")
 
 #******************************
 # 1. USER INTERFACE 
 #******************************
 
 ui<-fluidPage(
+    
+    tags$head(includeScript("googleanalytics.js")),
     
     # Header panel 
     headerPanel("Interactive Visualization of Contraceptive Dynamics"),
@@ -77,8 +234,9 @@ ui<-fluidPage(
             h5("It is important to recognize discontinuation 'while in need' and discontinuation due to method failure. Such discontinuation can be reduced by addressing the reasons - including ensuring women's ability to switch to other methods effectively, when desired."),
             
             hr(),
-            h5("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData")),
+            h5("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please", a("see here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData")),
             h5("For questions, bugs, or typos, please", a("contact me.", href="https://www.isquared.global/")),
+            h5("For code, please", a("see here.", href="https://github.com/yoonjoung/FPDynamicsDiagram_Shiny")),
             
             hr(),
             h6("Footnote on the figure:"),
