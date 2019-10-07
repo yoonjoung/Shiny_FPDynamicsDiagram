@@ -6,10 +6,11 @@ library(RCurl)
 
 date<-as.Date(Sys.time(	), format='%d%b%Y')
 
-# There are three parts in this document:
+# There are four parts in this document:
 # 0. Database update: tidying data for the app
 # 1. USER INTERFACE 
 # 2. SERVER
+# 3. CREATE APP 
 
 #******************************
 # 0. Database update 
@@ -202,14 +203,18 @@ ui<-fluidPage(
         
         # Main page for ourput display 
         mainPanel(
-            h4("Throughout women's life, their use of contraceptive methods keeps changing - i.e.,",strong("dynamic.")),
+            h4("Throughout a woman's life, her use of contraceptive methods keeps changing - in other words,",strong("it is dynamic.")),
             
-            h4("The interactive diagram shows",strong("contraceptive use continuation, switching, and discontinuation."), "It is based on 'twelve-month discontinuation rates' from Demographic and Health Surveys conducted in 60 countries."),
+            h4("The interactive diagram below shows",strong("contraceptive continuation, switching, and discontinuation"), "over time, based on 'twelve-month discontinuation rates' from",a("Demographic and Health Surveys", href="https://www.dhsprogram.com/"),"conducted in 60 countries."),
 
             hr(),
-            h4("Data source (latest DHS survey in the selected country)"),
+            h4("To get started",strong("select a country on the left.")),
+            
+            hr(),
+            h5("Data source (latest DHS survey in the selected country):"),
             verbatimTextOutput("Source"),# Output: latest survey in the selected country
-            h5("The total number of contraceptive use episodes analyzed (among women age 15-49 who started an episode of contraceptive use within the 5 years before the survey):"),
+            hr(),
+            h5("Total number of contraceptive use episodes (among women age 15-49 who started an episode of contraceptive use within the 5 years before the survey):"),
             verbatimTextOutput("sum"),
 
             hr(),
