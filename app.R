@@ -240,8 +240,8 @@ ui<-fluidPage(
             
             hr(),
             h5("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please", a("see here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData")),
-            h5("For questions, bugs, or typos, please", a("contact me.", href="https://www.isquared.global/")),
-            h5("For code, please", a("see here.", href="https://github.com/yoonjoung/FPDynamicsDiagram_Shiny")),
+            h5("For questions, bugs, or typos, please", a("contact me.", href="https://www.isquared.global/YJ")),
+            h5("For code, please see", a("GitHub.", href="https://github.com/yoonjoung/FPDynamicsDiagram_Shiny")),
             
             hr(),
             h6("Footnote on the figure:"),
@@ -250,12 +250,16 @@ ui<-fluidPage(
             
             hr(),
             h6("Footnote on the data:"),        
-            h6("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report. Last updated on: September 21, 2019"),  
+            h6("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report. (API data last accessed on: September 21, 2019)"),  
             h6("2. The data are at the episode level, and, thus, the distribution on the left side is NOT the 'method mix' distribution."),
             h6("3. In the figures, discontinuation refers to 'not using any methods' and thus excludes switching episodes."),   
             h6("4. Discontinuation is split into three groups: (1) discontinuation while 'not in need'; (2) discontinuation while 'in need'; and (3) discontinuation due to method failure. 'Not in need' includes two reasons: desire to become pregnant, and other fertility related reasons (e.g., infrequent sex/husband away, difficult to get pregnant/menopausal, and marital dissolution/separation). In addition, it is assumed, for this exercise, that all who discontinued because they wanted more effective methods indeed switched to another method."), 
             h6("5. Sum of percentage across three discontinuation types may not be 100, due to rounding"),
-            h6("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"),"about the background and potential implications. For those interested, actual distribution of switching across methods can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/"))
+            h6("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"),"about the background and potential implications. For those interested, actual distribution of switching across methods can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/")), 
+            
+            hr(),
+            h6("(Application last updated on:", as.Date(Sys.time(	), format='%d%b%Y'),")")
+        
         )    
     )    
 )
