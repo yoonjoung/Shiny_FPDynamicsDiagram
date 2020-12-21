@@ -1,0 +1,127 @@
+---
+author: "YJ Choi"
+date: "`r Sys.Date()`"
+fontsize: 12pt
+---
+
+```{r intro, echo=FALSE}
+knitr::opts_chunk$set(echo=FALSE, 
+                      message=FALSE, 
+                      comment = "", 
+                      warning=FALSE) 
+date<-as.Date(Sys.time(	), format='%d%b%Y')
+```
+Author: YJ Choi  
+Last updated: `r date`  
+
+This calls ten discontinuation indicators from DHS API. Run this periodically (or when new surveys are added to ApI) and run the shiney __"app.R"__. This file is separate from the main app code, because it contains DHS API user code.   
+
+### 1. Get API data for the 10 indicators. 
+
+```{r getAPIDATA, echo=FALSE}
+# Get required functions 
+library(jsonlite) 
+library(dplyr)
+library(data.table)
+
+# Call 10 indicators (9 columns + the denominator)  
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_PRG&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)   
+FP_DISR_W_PRG<- dta %>% rename(FP_DISR_W_PRG=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_DES&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_DES<- dta %>% rename(FP_DISR_W_DES=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_FRT&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_FRT<- dta %>% rename(FP_DISR_W_FRT=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SID&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_SID<- dta %>% rename(FP_DISR_W_SID=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_WME&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_WME<- dta %>% rename(FP_DISR_W_WME=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_MET&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_MET<- dta %>% rename(FP_DISR_W_MET=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_OTH&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_OTH<- dta %>% rename(FP_DISR_W_OTH=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_ANY&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_ANY<- dta %>% rename(FP_DISR_W_ANY=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SWH&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_SWH<- dta %>% rename(FP_DISR_W_SWH=Value)
+
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_NUM&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+jsondata<-fromJSON(url) 
+dta<-data.table(jsondata$Data)
+dta<-select(dta, CountryName, SurveyId, Value, 
+            CharacteristicCategory, CharacteristicLabel)
+FP_DISR_W_NUM<- dta %>% rename(FP_DISR_W_NUM=Value)
+```
+
+### 2. Merge 10 data frames into one data frame __"dtaapi"__ and save it to GitHub
+```{r merge, echo=FALSE}
+library(dplyr)
+
+# Merge 
+idvars<-c("CountryName", "SurveyId", "CharacteristicCategory", "CharacteristicLabel")
+dhsapi<-FP_DISR_W_PRG %>%
+    full_join(FP_DISR_W_DES, by =idvars) %>%
+    full_join(FP_DISR_W_FRT, by =idvars) %>%
+    full_join(FP_DISR_W_SID, by =idvars) %>%
+    full_join(FP_DISR_W_WME, by =idvars) %>%
+    full_join(FP_DISR_W_MET, by =idvars) %>%
+    full_join(FP_DISR_W_OTH, by =idvars) %>%
+    full_join(FP_DISR_W_ANY, by =idvars) %>%
+    full_join(FP_DISR_W_SWH, by =idvars) %>% 
+    full_join(FP_DISR_W_NUM, by =idvars) 
+```
+
+### 3. Export as a CSV file and save it to GitHub
+```{r savecsv, echo=FALSE}
+#save dta to a CSV tile for shiny 
+write.csv(dhsapi, file="dhsapi.csv", row.names = FALSE)
+
+nsurveys<-length(unique(dhsapi$SurveyId))
+ncountries<-length(unique(dhsapi$CountryName)) 
+```
+
+
+END of API data preparation.  Data from `r nsurveys` surveys conducted in `r ncountries` countries.  

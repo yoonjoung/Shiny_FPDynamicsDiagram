@@ -7,7 +7,7 @@ library(RCurl)
 date<-as.Date(Sys.time(	), format='%d%b%Y')
 
 # There are four parts in this document:
-# 0. Database update: tidying data for the app
+# 0. Database update: tidying DHS API data for the app
 # 1. USER INTERFACE 
 # 2. SERVER
 # 3. CREATE APP 
@@ -16,9 +16,11 @@ date<-as.Date(Sys.time(	), format='%d%b%Y')
 # 0. Database update 
 #******************************
 
-# First, knit "FPDynamicsDiagram_callAPI.rmd" in the folder which creates "dtaapi.csv" 
-#dtaapi <- read.csv("https://github.com/yoonjoung/FPDynamicsDiagram_Shiny/blob/master/dtaapi.csv")
-dtaapi <- read.csv("dtaapi.csv")
+# First, knit "FPDynamicsDiagram_callAPI.rmd" in the folder which creates "dhsapi.csv" 
+# Second, knit "FPDynamicsDiagram_callAPI_check.rmd" in the folder which checks data 
+
+url<-"https://raw.githubusercontent.com/yoonjoung/FPDynamicsDiagram_Shiny/master/dhsapi.csv"
+dtaapi<-read.csv(url)
 
 # 1. rename var and tidy var names
 dtaall<-dtaapi %>%
@@ -35,6 +37,7 @@ dtaall<-dtaapi %>%
     rename (country	=	CountryName) %>%
     rename (group	=	CharacteristicCategory) %>% 
     rename (grouplabel	=	CharacteristicLabel) 
+
 colnames(dtaall)<-tolower(names(dtaall))
 
 # 2. keep only estimates by contraceptive methods (drop the total row)
@@ -167,12 +170,20 @@ dta<-dta %>%
         # check if test==denom
         test=DiscontinuationNotInNeed+DiscontinuationInNeed+DiscontinuationFailure+MaleSterilization+FemaleSterilization+IUD+Implants+Injectables+Pill+Condom+FemaleCondom+LAM+EC+OtherModern+Rhythm+Withdrawal+OtherTraditional,
         confirm=test-denom ) %>%
-
-    mutate_if(is.numeric, round, 1) %>%
-    ungroup(dta) 
+    ungroup()
+    
+    #mutate_if(is.numeric, round(., 1)) 
+    
+    #mutate_at(vars(starts_with("x")), 
+    #          ~replace(., is.na(.)==TRUE, 0))
+    
+    #mutate_at(vars(starts_with("xequip_malfunction_reason_")), 
+    #          funs(ifelse(xequip_anymalfunction!=1, NA, .)))%>%        
+    
 
 dta<-arrange(dta, country, order)
 countrylist<-unique(as.vector(dta$country))
+
 
 #******************************
 # 1. USER INTERFACE 
@@ -205,7 +216,7 @@ ui<-fluidPage(
         mainPanel(
             h4("Throughout a woman's life, her use of contraceptive methods keeps changing - in other words,",strong("it is dynamic.")),
             
-            h4("The interactive diagram below shows",strong("contraceptive continuation, switching, and discontinuation"), "over time, based on 'twelve-month discontinuation rates' from",a("Demographic and Health Surveys", href="https://www.dhsprogram.com/"),"conducted in 60 countries."),
+            h4("The interactive diagram below shows",strong("contraceptive continuation, switching, and discontinuation"), "over time, based on 'twelve-month discontinuation rates' from",a("Demographic and Health Surveys", href="https://www.dhsprogram.com/"),"conducted in 62 countries."),
 
             hr(),
             h4("To get started",strong("select a country on the left.")),
@@ -250,7 +261,7 @@ ui<-fluidPage(
             
             hr(),
             h6("Footnote on the data:"),        
-            h6("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report. (API data last accessed on: September 21, 2019)"),  
+            h6("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report. (API data last accessed on: February 21, 2019)"),  
             h6("2. The data are at the episode level, and, thus, the distribution on the left side is NOT the 'method mix' distribution."),
             h6("3. In the figures, discontinuation refers to 'not using any methods' and thus excludes switching episodes."),   
             h6("4. Discontinuation is split into three groups: (1) discontinuation while 'not in need'; (2) discontinuation while 'in need'; and (3) discontinuation due to method failure. 'Not in need' includes two reasons: desire to become pregnant, and other fertility related reasons (e.g., infrequent sex/husband away, difficult to get pregnant/menopausal, and marital dissolution/separation). In addition, it is assumed, for this exercise, that all who discontinued because they wanted more effective methods indeed switched to another method."), 
@@ -258,7 +269,7 @@ ui<-fluidPage(
             h6("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"),"about the background and potential implications. For those interested, actual distribution of switching across methods can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/")), 
             
             hr(),
-            h6("(Application last updated on:", as.Date(Sys.time(	), format='%d%b%Y'),")")
+            h6("(Application last updated on: December 21, 2020)")
         
         )    
     )    
