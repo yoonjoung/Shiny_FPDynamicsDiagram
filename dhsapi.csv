@@ -104,6 +104,16 @@
 "Bangladesh","BD2014DHS",3.6,"Contraceptive method","Condom",11.4,4.8,5.2,2.7,5.9,6.8,40.4,18.2,1627
 "Bangladesh","BD2014DHS",3.4,"Contraceptive method","Periodic abstinence",3,1.5,0.2,5.1,2.2,1.7,17.2,8.4,774
 "Bangladesh","BD2014DHS",4.2,"Contraceptive method","Withdrawal",6,1.3,0,4.8,6.5,3.8,26.6,14.4,308
+"Bangladesh","BD2017DHS",3.9,"Total","Total",8.1,8.2,10.5,3,2.6,1,37.1,15,16566
+"Bangladesh","BD2017DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,318
+"Bangladesh","BD2017DHS",4.5,"Contraceptive method","Pill",10.5,11.8,10.8,2.3,1,0.7,41.6,13,8256
+"Bangladesh","BD2017DHS",1.1,"Contraceptive method","Injectables",4,5.4,20.1,1.2,1.6,0.7,34.1,19.1,2988
+"Bangladesh","BD2017DHS",0,"Contraceptive method","Implants",0.1,0.3,10.8,0,0,0,11.2,8.3,540
+"Bangladesh","BD2017DHS",5.8,"Contraceptive method","Condom",10.7,5.6,6,4.5,10.3,2,44.7,21.1,2369
+"Bangladesh","BD2017DHS",0,"Contraceptive method","Other modern methods",0,0.4,0,0,1,0,1.3,1,199
+"Bangladesh","BD2017DHS",4.7,"Contraceptive method","Periodic abstinence",4.8,3.5,1,9,2.9,1.8,27.7,14.3,1274
+"Bangladesh","BD2017DHS",6.4,"Contraceptive method","Withdrawal",5.7,6.1,1.7,5.1,2.1,3.7,30.9,12.3,597
+"Bangladesh","BD2017DHS",0,"Contraceptive method","Other traditional methods",0,0,0,2.5,0,0,2.5,2.5,25
 "Burkina Faso","BF2010DHS",1.5,"Total","Total",6.8,1.7,5.1,1.1,1.4,2.4,20,1.8,3548
 "Burkina Faso","BF2010DHS",1.9,"Contraceptive method","Pill",7.9,1.2,7.1,0.8,1.5,2.7,23.1,2.4,756
 "Burkina Faso","BF2010DHS",0.3,"Contraceptive method","Injectables",10.9,1.4,9.1,1,2.7,2.4,27.8,1.8,1357
@@ -950,6 +960,11 @@
 "Sierra Leone","SL2013DHS",0.7,"Contraceptive method","Lactational amenorrhea",0.6,4.5,0.7,1.9,0,19.4,27.8,3.5,205
 "Sierra Leone","SL2013DHS",0,"Contraceptive method","Other modern methods",6.3,0,4.3,5.9,0,0,16.6,5.9,128
 "Sierra Leone","SL2013DHS",6.1,"Contraceptive method","Other traditional methods",0.6,1.5,2.3,0.4,0,3.2,14,1.9,245
+"Sierra Leone","SL2019DHS",0.5,"Total","Total",9.3,1.5,15.9,1.8,2.7,2.8,34.5,1.7,5244
+"Sierra Leone","SL2019DHS",1.6,"Contraceptive method","Pill",13.4,2.9,14.3,3.2,2.8,3.8,42.1,3.3,1072
+"Sierra Leone","SL2019DHS",0.3,"Contraceptive method","Injectables",11.1,1.3,21.8,1.5,3.1,3,42,1.2,2356
+"Sierra Leone","SL2019DHS",0.1,"Contraceptive method","Implants",3.6,0,11.2,0.1,1,1.2,17.3,0.6,1476
+"Sierra Leone","SL2019DHS",0,"Contraceptive method","Other traditional methods",11.3,5,0,0,2.2,0,18.6,2.8,82
 "Senegal","SN2010DHS",3.5,"Total","Total",7.3,1,14.2,3.2,3.7,17.1,49.9,5.2,3039
 "Senegal","SN2010DHS",5.8,"Contraceptive method","Pill",6.8,1.3,14.2,3.3,3.6,18.3,53.3,5.3,967
 "Senegal","SN2010DHS",1.1,"Contraceptive method","Injectables",8.2,1.4,23.8,1.6,4.6,12.8,53.4,4.3,1082
@@ -990,6 +1005,13 @@
 "Senegal","SN2017DHS",1.4,"Contraceptive method","Condom",5.8,22.6,1.4,6.9,1.1,6.4,45.7,9.6,305
 "Senegal","SN2017DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,100
 "Senegal","SN2017DHS",2.6,"Contraceptive method","Other traditional methods",6.9,0.5,1.7,0,0,3.6,15.1,0,209
+"Senegal","SN2018DHS",2,"Total","Total",5.5,6.7,11.4,1.6,0.8,3.7,31.7,4.5,3160
+"Senegal","SN2018DHS",2,"Contraceptive method","Pill",8.9,14.9,12.3,1.4,1.2,3.6,44.4,6.2,599
+"Senegal","SN2018DHS",3.6,"Contraceptive method","IUD",0.6,3.4,3.9,2,0.1,1.3,14.9,1.8,176
+"Senegal","SN2018DHS",1.5,"Contraceptive method","Injectables",6.5,8.3,18.1,1.2,0.9,4.2,40.7,5.1,1251
+"Senegal","SN2018DHS",0.4,"Contraceptive method","Implants",1.9,0.1,6,0.1,0.2,3.5,12.2,3,811
+"Senegal","SN2018DHS",0,"Contraceptive method","Other modern methods",100,0,0,0,0,0,100,0,139
+"Senegal","SN2018DHS",10.5,"Contraceptive method","Other traditional methods",6.3,2.4,0,6.5,0.7,8.7,35.2,4.4,185
 "Tajikistan","TJ2012DHS",2.2,"Total","Total",3.4,2.4,3,1.6,3.5,8.1,24.3,4.7,2022
 "Tajikistan","TJ2012DHS",5.3,"Contraceptive method","Pill",4.4,6.2,2.9,2.5,4.9,9.8,36,7.2,237
 "Tajikistan","TJ2012DHS",0.4,"Contraceptive method","IUD",2.2,0.8,2.7,0.2,1.8,1.2,9.4,1.1,1054
@@ -1054,14 +1076,14 @@
 "Turkey","TR2008DHS",13.3,"Contraceptive method","Other modern methods",0,0,21,1.9,10.6,12.1,58.9,38.4,37
 "Turkey","TR2008DHS",11.4,"Contraceptive method","Withdrawal",9.8,1.5,0.7,8.4,0.8,4.8,37.5,11.9,2361
 "Turkey","TR2008DHS",13.2,"Contraceptive method","Other traditional methods",4.4,2.6,0,20.6,0,19.6,60.5,33.1,121
-"Turkey","TR2013DHS",5.9,"Total","Total",8.9,1.7,5.3,5.3,1.4,3.4,31.8,12.9,5458
-"Turkey","TR2013DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,265
-"Turkey","TR2013DHS",4.7,"Contraceptive method","Pill",10,4,21.1,2.1,3.4,2.4,47.6,22.8,623
-"Turkey","TR2013DHS",0.8,"Contraceptive method","IUD",1.1,0.2,7.2,0,0.1,1.3,10.7,6.5,772
-"Turkey","TR2013DHS",6.7,"Contraceptive method","Injectables",6.7,1.8,40,3.2,2.7,5,66.1,42,198
-"Turkey","TR2013DHS",4.5,"Contraceptive method","Condom",10.7,2.2,1,5.8,3.3,5.2,32.7,13.5,1467
-"Turkey","TR2013DHS",9.4,"Contraceptive method","Withdrawal",11.6,1.2,0.2,8.5,0.1,3.2,34.1,10.3,2055
-"Turkey","TR2013DHS",16.6,"Contraceptive method","Other traditional methods",3.4,1.8,0,26.1,0,8.2,56.1,31.7,69
+"Turkey","TR2013DHS",5.9,"Total","Total",8.9,1.7,5.3,5.3,1.4,3.4,31.8,12.9,5597
+"Turkey","TR2013DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,272
+"Turkey","TR2013DHS",4.7,"Contraceptive method","Pill",10.1,4,21,2.1,3.4,2.4,47.5,22.8,638
+"Turkey","TR2013DHS",0.8,"Contraceptive method","IUD",1.1,0.2,7.3,0,0.1,1.3,10.8,6.5,792
+"Turkey","TR2013DHS",6.7,"Contraceptive method","Injectables",6.8,1.8,40,3.2,2.7,4.9,66.1,41.9,204
+"Turkey","TR2013DHS",4.5,"Contraceptive method","Condom",10.7,2.2,1,5.8,3.3,5.2,32.7,13.5,1503
+"Turkey","TR2013DHS",9.4,"Contraceptive method","Withdrawal",11.6,1.2,0.2,8.5,0.1,3.2,34,10.3,2108
+"Turkey","TR2013DHS",16.6,"Contraceptive method","Other traditional methods",3.5,1.9,0,26.2,0,8.1,56.3,31.9,71
 "Tanzania","TZ2004DHS",3.9,"Total","Total",8.4,2.5,11.6,3.5,3.4,4.5,37.8,9.4,4883
 "Tanzania","TZ2004DHS",3.9,"Contraceptive method","Pill",8.7,1.9,17.8,1.9,3.6,2.7,40.5,9.5,1276
 "Tanzania","TZ2004DHS",0.9,"Contraceptive method","Injectables",5.5,2,20.9,0.8,3.4,2.9,36.5,8,1468
@@ -1217,6 +1239,7 @@
 "Peru","PE2011DHS",NA,"Contraceptive method","Lactational amenorrhea",NA,NA,NA,NA,NA,NA,NA,NA,196
 "Pakistan","PK2017DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,125
 "Rwanda","RW2015DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,325
+"Sierra Leone","SL2019DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,258
 "Senegal","SN2014DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,198
 "Timor-Leste","TL2016DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,137
 "Vietnam","VN1997DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,42
