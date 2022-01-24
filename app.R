@@ -194,7 +194,7 @@ ui<-fluidPage(
     tags$head(includeScript("googleanalytics.js")),
     
     # Header panel 
-    headerPanel("Interactive Visualization of Contraceptive Dynamics"),
+    headerPanel("Interactive Visualization of Contraceptive Dynamics: Twelve-month discontinuation rates from Demographic and Health Surveys"),
     
     # Title panel 
     #titlePanel("Based on discontinuration rate data from DHS"),
@@ -248,29 +248,33 @@ ui<-fluidPage(
             hr(),
             h4(strong("So what?")),
             h5("It is important to recognize discontinuation 'while in need' and discontinuation due to method failure. Such discontinuation can be reduced by addressing the reasons - including ensuring women's ability to switch to other methods effectively, when desired."),
+
+            hr(),
+            h5(strong("Footnote on the figure:")),
+            h5("1. Right side looks longer only because of more number of categories, and total height is same between source and target."),   
+            h5("2. Caution: the flow/chord thickness is nearly impossible to differentiate the volume when it is low. For small volume flow, refer to the table,",strong("'Twelve-month contraceptive discontinuation rates',"),"in the survey's final report."),
             
             hr(),
-            h5("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please", a("see here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData")),
-            h5("For questions, bugs, or typos, please", a("contact me.", href="https://www.isquared.global/YJ")),
-            h5("For code, please see", a("GitHub.", href="https://github.com/yoonjoung/FPDynamicsDiagram_Shiny")),
+            h5(strong("Footnote on the data and methods:")),        
+            h5("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report."),  
+            h5("2. The data are at the episode level, and, thus, the distribution on the left side is NOT the 'method mix' distribution."),
+            h5("3. In the figures, discontinuation refers to 'not using any methods' and thus excludes switching episodes."),   
+            h5("4. Discontinuation is split into three groups: (1) discontinuation while 'not in need'; (2) discontinuation while 'in need'; and (3) discontinuation due to method failure. 'Not in need' includes two reasons: desire to become pregnant, and other fertility related reasons (e.g., infrequent sex/husband away, difficult to get pregnant/menopausal, and marital dissolution/separation). In addition, it is assumed, for this exercise, that all who discontinued because they wanted more effective methods indeed switched to another method."), 
+            h5("5. Sum of percentage across three discontinuation types may not be 100, due to rounding"),
+            h5("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly.", 
+               strong("Please see", a("this working paper.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"),"about the background, detailed methods, and potential implications."),
+               "For those interested, actual distribution of switching across methods can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/")), 
             
             hr(),
-            h6("Footnote on the figure:"),
-            h6("1. Right side looks longer only because of more number of categories, and total height is same between source and target."),   
-            h6("2. Caution: the flow/chord thickness is nearly impossible to differentiate the volume when it is low. For small volume flow, refer to the table,",strong("'Twelve-month contraceptive discontinuation rates',"),"in the survey's final report."),
-            
+            h6("Application initially published on June 27, 2019."),
+            h6("DHS API data last accessed and the application updated on: January 24, 2022."),
+
             hr(),
-            h6("Footnote on the data:"),        
-            h6("1. Source: Estimated", strong("discontinuation rates"), "from",a("Demographic and Health Surveys API.", href="http://api.dhsprogram.com/#/index.html"),"API data may have more detailed categories of contraceptive methods than the table in the final report. (API data last accessed on: February 21, 2019)"),  
-            h6("2. The data are at the episode level, and, thus, the distribution on the left side is NOT the 'method mix' distribution."),
-            h6("3. In the figures, discontinuation refers to 'not using any methods' and thus excludes switching episodes."),   
-            h6("4. Discontinuation is split into three groups: (1) discontinuation while 'not in need'; (2) discontinuation while 'in need'; and (3) discontinuation due to method failure. 'Not in need' includes two reasons: desire to become pregnant, and other fertility related reasons (e.g., infrequent sex/husband away, difficult to get pregnant/menopausal, and marital dissolution/separation). In addition, it is assumed, for this exercise, that all who discontinued because they wanted more effective methods indeed switched to another method."), 
-            h6("5. Sum of percentage across three discontinuation types may not be 100, due to rounding"),
-            h6("6. Switching to other methods was calculated, with a simple assumption that new switched method is selected randomly. Please see", a("here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"),"about the background and potential implications. For those interested, actual distribution of switching across methods can be calculated using", a("the women-level calendar data.",href="https://www.dhsprogram.com/data/calendar-tutorial/")), 
-            
-            hr(),
-            h6("(Application last updated on: December 21, 2020)")
-        
+            h6(span("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please", a("see here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"), style = "color:gray")),
+            h6(span("For questions, bugs, or typos, please", a("contact me.", href="https://www.isquared.global/YJ"), style = "color:gray")),
+            h6(span("For code, please see", a("GitHub.", href="https://github.com/yoonjoung/FPDynamicsDiagram_Shiny"), style = "color:gray")),
+            h6(em(span("Making Data Delicious, One Byte at a Time", style = "color:gray")))
+                                
         )    
     )    
 )
