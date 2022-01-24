@@ -3,6 +3,9 @@ author: "YJ Choi"
 date: "`r Sys.Date()`"
 fontsize: 12pt
 ---
+
+If there are changes in the data structure (e.g., inclusion of a brand new method), data management needs to be changed (i.e., code chunk `tidyAsInApp`). Any change in that code should be reflected in the app, section `# 0. Database update`.   
+
 ```{r ready, echo=FALSE}
 #dtaapi <- read.csv("https://github.com/yoonjoung/FPDynamicsDiagram_Shiny/blob/master/dhsapi.csv")
 dtaapi <- read.csv("dhsapi.csv")
