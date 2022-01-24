@@ -14,7 +14,7 @@ date<-as.Date(Sys.time(	), format='%d%b%Y')
 Author: YJ Choi  
 Last updated: `r date`  
 
-This calls ten discontinuation indicators from DHS API. Run this periodically (or when new surveys are added to ApI) and run the shiney __"app.R"__. This file is separate from the main app code, because it contains DHS API user code.   
+This calls ten discontinuation indicators from DHS API. Run this periodically (or when new surveys are added to ApI) and run the Shiny __"app.R"__. This file is separate from the main app code, because it contains DHS API user code.   
 
 ### 1. Get API data for the 10 indicators. 
 

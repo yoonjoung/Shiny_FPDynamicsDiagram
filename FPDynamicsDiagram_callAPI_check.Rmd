@@ -43,18 +43,21 @@ dtaall<-dtaall %>% mutate(
     order= ifelse(grouplabel == "Injectables",5, order),
     order= ifelse(grouplabel == "Pill",6, order),
     order= ifelse(grouplabel == "Condom",7, order),
+    
     order= ifelse(grouplabel == "Female condom",8, order),
-    order= ifelse(grouplabel == "Lactational amenorrhea",9, order),
-    order= ifelse(grouplabel == "Emergency contraception",10, order),
-    order= ifelse(grouplabel == "Other modern methods",11, order),
-    order= ifelse(grouplabel == "Periodic abstinence",12, order),
-    order= ifelse(grouplabel == "Withdrawal",13, order),
-    order= ifelse(grouplabel == "Other traditional methods",14, order),
+    order= ifelse(grouplabel == "Standard days method",9, order),
+    order= ifelse(grouplabel == "Lactational amenorrhea",10, order),
+    order= ifelse(grouplabel == "Emergency contraception",11, order),
+    order= ifelse(grouplabel == "Other modern methods",12, order),
+    
+    order= ifelse(grouplabel == "Periodic abstinence",13, order),
+    order= ifelse(grouplabel == "Withdrawal",14, order),
+    order= ifelse(grouplabel == "Other traditional methods",15, order),
     
     zzmodern=0, 
-    zzmodern=ifelse(order>=1 & order<=11,1, zzmodern),
+    zzmodern=ifelse(order>=1 & order<=12,1, zzmodern),
     zztraditional=0,
-    zztraditional=ifelse(order>=12 & order<=14,1, zztraditional)) 
+    zztraditional=ifelse(order>=13 & order<=15,1, zztraditional)) 
 
 # 4. create type and survey year variables
 dtaall<-dtaall %>% 
@@ -97,10 +100,13 @@ dta<-dta %>%
         Injectables =((denom*xswh/100) / (nummethods-1) ),
         Pill =((denom*xswh/100) / (nummethods-1) ),
         Condom =((denom*xswh/100) / (nummethods-1) ),
+        
         FemaleCondom =((denom*xswh/100) / (nummethods-1) ),
+        SDM =((denom*xswh/100) / (nummethods-1) ),
         LAM =((denom*xswh/100) / (nummethods-1) ),
         EC =((denom*xswh/100) / (nummethods-1) ),
         OtherModern =((denom*xswh/100) / (nummethods-1) ),
+        
         Rhythm =((denom*xswh/100) / (nummethods-1) ),
         Withdrawal =((denom*xswh/100) / (nummethods-1) ),
         OtherTraditional =((denom*xswh/100) / (nummethods-1) ), 
@@ -114,13 +120,16 @@ dta<-dta %>%
         Injectables= ifelse(order==5, continue, Injectables),
         Pill= ifelse(order==6, continue, Pill),
         Condom= ifelse(order==7, continue, Condom),
+        
         FemaleCondom= ifelse(order==8, continue, FemaleCondom),
-        LAM= ifelse(order==9, continue, LAM),
-        EC= ifelse(order==10, continue, EC),
-        OtherModern= ifelse(order==11, continue, OtherModern),
-        Rhythm= ifelse(order==12, continue, Rhythm),
-        Withdrawal= ifelse(order==13, continue, Withdrawal),
-        OtherTraditional= ifelse(order==14, continue, OtherTraditional) ) %>%
+        SDM= ifelse(order==9, continue, SDM),
+        LAM= ifelse(order==10, continue, LAM),
+        EC= ifelse(order==11, continue, EC),
+        OtherModern= ifelse(order==12, continue, OtherModern),
+        
+        Rhythm= ifelse(order==13, continue, Rhythm),
+        Withdrawal= ifelse(order==14, continue, Withdrawal),
+        OtherTraditional= ifelse(order==15, continue, OtherTraditional) ) %>%
     
     group_by (surveyid) %>%   
     mutate (
@@ -132,13 +141,16 @@ dta<-dta %>%
         ifInjectables= (5 %in% order),
         ifPill= (6 %in% order),
         ifCondom= (7 %in% order),
+        
         ifFemaleCondom= (8 %in% order),
-        ifLAM= (9 %in% order),
-        ifEC= (10 %in% order),
-        ifOtherModern= (11 %in% order),
-        ifRhythm= (12 %in% order),
-        ifWithdrawal= (13 %in% order),
-        ifOtherTraditional= (14 %in% order)) %>%    
+        ifSDM= (9 %in% order),
+        ifLAM= (10 %in% order),
+        ifEC= (11 %in% order),
+        ifOtherModern= (12 %in% order),
+        
+        ifRhythm= (13 %in% order),
+        ifWithdrawal= (14 %in% order),
+        ifOtherTraditional= (15 %in% order)) %>%    
     
     mutate (    
         #recode to 0 for methods that do not exist in the survey 
@@ -149,20 +161,23 @@ dta<-dta %>%
         Injectables= ifelse(ifInjectables==FALSE,0, Injectables),
         Pill= ifelse(ifPill==FALSE,0, Pill),
         Condom= ifelse(ifCondom==FALSE,0, Condom),
+        
         FemaleCondom= ifelse(ifFemaleCondom==FALSE,0, FemaleCondom),
+        SDM= ifelse(ifSDM==FALSE,0, SDM),
         LAM= ifelse(ifLAM==FALSE,0, LAM),
         EC= ifelse(ifEC==FALSE,0, EC),
         OtherModern= ifelse(ifOtherModern==FALSE,0, OtherModern),
+        
         Rhythm= ifelse(ifRhythm==FALSE,0, Rhythm),
         Withdrawal= ifelse(ifWithdrawal==FALSE,0, Withdrawal),
         OtherTraditional= ifelse(ifOtherTraditional==FALSE,0, OtherTraditional),
 
         # check if test==denom
-        test=DiscontinuationNotInNeed+DiscontinuationInNeed+DiscontinuationFailure+MaleSterilization+FemaleSterilization+IUD+Implants+Injectables+Pill+Condom+FemaleCondom+LAM+EC+OtherModern+Rhythm+Withdrawal+OtherTraditional,
+        test=DiscontinuationNotInNeed+DiscontinuationInNeed+DiscontinuationFailure+MaleSterilization+FemaleSterilization+IUD+Implants+Injectables+Pill+Condom+FemaleCondom+SDM+LAM+EC+OtherModern+Rhythm+Withdrawal+OtherTraditional,
         confirm=test-denom ) %>%
 
     mutate_if(is.numeric, round, 1) %>%
-    ungroup(dta) 
+    ungroup() 
 ```
 
 ```{r CHECK1}
