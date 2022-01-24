@@ -19,7 +19,7 @@ date<-as.Date(Sys.time(	), format='%d%b%Y')
 # First, knit "FPDynamicsDiagram_callAPI.rmd" in the folder which creates "dhsapi.csv" 
 # Second, knit "FPDynamicsDiagram_callAPI_check.rmd" in the folder which checks data 
 
-url<-"https://raw.githubusercontent.com/yoonjoung/FPDynamicsDiagram_Shiny/master/dhsapi.csv"
+url<-"https://raw.githubusercontent.com/yoonjoung/Shiny_FPDynamicsDiagram/master/dhsapi.csv"
 dtaapi<-read.csv(url)
 
 # 1. rename var and tidy var names
