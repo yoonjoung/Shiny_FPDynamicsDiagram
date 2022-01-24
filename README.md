@@ -1,6 +1,6 @@
 # FPDynamicsDiagram_Shiny
 
-This app creates interactive diagrams on __contraceptive continuation, switching, and discontinuation over time, based on 'twelve-month discontinuation rates' from Demographic and Health Surveys conducted in 60 countries__. The app is available at: https://yj-choi.shinyapps.io/FPDynamicsDiagram_Shiny/
+This app creates interactive diagrams on __contraceptive continuation, switching, and discontinuation over time, based on 'twelve-month discontinuation rates' from Demographic and Health Surveys conducted in 60 countries__. The app is available at: https://isquared.shinyapps.io/DHS_ContraceptiveDiscontinuation/
 
 There are two files:
 
