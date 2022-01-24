@@ -4,7 +4,7 @@ This app creates interactive diagrams on __contraceptive continuation, switching
 
 There are two files:
 
-1. dhsapi.csv	: DHS API indicator data for the app. It includes ten discontinuation. Data access is separated from the main app code, since it contains DHS API user code - until I figure out how to deal with such cases. An example code without my user information is available in Appendix A of this paper: http://rpubs.com/YJ_Choi/PAA2020. 
+1. dhsapi.csv	: DHS API indicator data for the app. It includes ten discontinuation. Data access is separated from the main app code, since it contains DHS API user code - until I figure out how to deal with such cases. An example code without my user information is available in Appendix A of this paper: http://rpubs.com/YJ_Choi/PAA2020. API data are accessed/refreshed periodically. Last update was on January 24, 2022.  
 
 2. app.R:	
 There are four section:
