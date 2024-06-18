@@ -121,6 +121,15 @@
 "Burkina Faso","BF2010DHS",1.6,"Contraceptive method","Condom",2.4,5.3,0.3,1.7,0.1,4.5,16,2.3,603
 "Burkina Faso","BF2010DHS",8,"Contraceptive method","Other modern methods",23.1,0,0,0,0,0,31,0,80
 "Burkina Faso","BF2010DHS",10.7,"Contraceptive method","Periodic abstinence",3.6,0.3,0,1.4,0.7,1.4,18.1,1.4,216
+"Burkina Faso","BF2021DHS",0.9,"Total","Total",9.8,1.8,5.5,2.9,0.3,4.6,28.9,3.2,8438
+"Burkina Faso","BF2021DHS",1.4,"Contraceptive method","Pill",14.6,4.2,7.3,4.8,0.7,9.4,45.8,4.4,901
+"Burkina Faso","BF2021DHS",0.5,"Contraceptive method","IUD",5.3,0.5,8.7,1,0.2,3.5,21.2,3.2,317
+"Burkina Faso","BF2021DHS",0.9,"Contraceptive method","Injectables",15.7,2.7,9.2,3,0.7,7,45.9,3.9,2271
+"Burkina Faso","BF2021DHS",0.4,"Contraceptive method","Implants",5.6,0.3,4.9,0.7,0,1.5,15.1,1.4,3336
+"Burkina Faso","BF2021DHS",1.4,"Contraceptive method","Condom",4.5,3.2,0.1,4.6,0.2,5.9,20,3.2,746
+"Burkina Faso","BF2021DHS",0,"Contraceptive method","Other modern methods",0,23.3,0,0,0,0,23.3,0,268
+"Burkina Faso","BF2021DHS",2.7,"Contraceptive method","Periodic abstinence",11,2.3,0,4.5,0,3.7,24.5,2.6,561
+"Burkina Faso","BF2021DHS",0,"Contraceptive method","Other traditional methods",20.4,0,0,22.2,0,0,42.6,22.2,36
 "Benin","BJ2012DHS",2.8,"Total","Total",7.7,0.8,5.9,5.1,5.3,12.3,39.9,1.5,3479
 "Benin","BJ2012DHS",3.6,"Contraceptive method","Pill",7.8,0,16.8,8.7,8.7,9.4,54.9,0.8,449
 "Benin","BJ2012DHS",2,"Contraceptive method","Injectables",10.3,0.3,15.5,3.9,7.5,8.7,48.2,2,465
@@ -175,6 +184,14 @@
 "Burundi","BU2016DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,218
 "Burundi","BU2016DHS",10.9,"Contraceptive method","Periodic abstinence",10.2,1.1,0,0.8,3.7,4,30.7,0.5,376
 "Burundi","BU2016DHS",8.4,"Contraceptive method","Withdrawal",11.3,2.2,0,5.1,3.3,11.8,42.1,3.8,500
+"Cote d'Ivoire","CI2021DHS",0.5,"Total","Total",11.1,3.8,6,3.2,0.6,6.4,35.8,2.9,4822
+"Cote d'Ivoire","CI2021DHS",0.4,"Contraceptive method","Pill",15.7,3.5,9.7,2.6,0.8,6.1,44.6,2.2,1107
+"Cote d'Ivoire","CI2021DHS",0.2,"Contraceptive method","Injectables",14.2,1.3,11.8,1.3,1.3,5.1,45.6,3.5,936
+"Cote d'Ivoire","CI2021DHS",0.1,"Contraceptive method","Implants",4.1,0.1,4.7,1.4,0.1,2.5,17.1,0.7,939
+"Cote d'Ivoire","CI2021DHS",0.7,"Contraceptive method","Condom",8.2,9.4,2.1,5.6,0.1,9.5,35.5,3.6,918
+"Cote d'Ivoire","CI2021DHS",0,"Contraceptive method","Other modern methods",10,0,0,0,0,0,10,0,267
+"Cote d'Ivoire","CI2021DHS",2.4,"Contraceptive method","Periodic abstinence",13.3,4.3,0.3,1.5,0,5.1,27.2,1.3,470
+"Cote d'Ivoire","CI2021DHS",0.2,"Contraceptive method","Other traditional methods",16.9,3.5,0.4,3.9,0,10.4,35.3,0.5,186
 "Colombia","CO1990DHS",8.3,"Total","Total",6,2.8,10.4,3.6,2.5,5.7,39.3,15.5,5112
 "Colombia","CO1990DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,507
 "Colombia","CO1990DHS",5.6,"Contraceptive method","Pill",8.5,3.6,17,0.9,2.4,7,44.9,15.3,1707
@@ -340,6 +357,13 @@
 "Ethiopia","ET2016DHS",0,"Contraceptive method","IUD",2,0,7,0.1,2.2,2.1,13.3,3.4,248
 "Ethiopia","ET2016DHS",0.4,"Contraceptive method","Injectables",13.1,4.9,8.1,3.4,5.2,3.1,38.3,4.4,4365
 "Ethiopia","ET2016DHS",0.3,"Contraceptive method","Implants",3.9,0.3,2.5,0.9,2,1,10.9,2.4,1136
+"Gabon","GA2019DHS",1.7,"Total","Total",8.4,14.3,3.4,3.3,5.2,11.9,48.1,5.4,3764
+"Gabon","GA2019DHS",0.2,"Contraceptive method","Pill",12.2,3.2,15.7,0.9,8.4,10.1,50.7,6.8,445
+"Gabon","GA2019DHS",0,"Contraceptive method","Injectables",0.9,0.3,28.9,2.1,7.6,8,47.8,8.3,137
+"Gabon","GA2019DHS",1.5,"Contraceptive method","Condom",8.3,16.8,0.3,1.5,5,13.3,46.8,3.8,1925
+"Gabon","GA2019DHS",0,"Contraceptive method","Other modern methods",0,1.8,0,2.4,0,9.4,13.7,0,337
+"Gabon","GA2019DHS",1.6,"Contraceptive method","Periodic abstinence",7,11.2,0,4.9,1.2,4.8,30.7,5.6,382
+"Gabon","GA2019DHS",3.4,"Contraceptive method","Withdrawal",10,20.6,0.1,8,5.1,9.3,56.5,8,523
 "Ghana","GH2014DHS",4.2,"Total","Total",4.5,5.1,6.3,1,1.9,1.7,24.7,2.1,2960
 "Ghana","GH2014DHS",6,"Contraceptive method","Pill",4.7,5.8,7.6,0.7,3.3,1.5,29.6,1.9,585
 "Ghana","GH2014DHS",1.5,"Contraceptive method","Injectables",6,2.4,13.1,1.4,1.6,3,29.1,2.9,862
@@ -348,6 +372,18 @@
 "Ghana","GH2014DHS",10.6,"Contraceptive method","Other modern methods",7.6,12.4,3.1,0,7.2,0,40.8,1.2,259
 "Ghana","GH2014DHS",10.5,"Contraceptive method","Periodic abstinence",4.4,2.9,0,0.2,0.3,0.4,18.8,0.4,398
 "Ghana","GH2014DHS",6.9,"Contraceptive method","Withdrawal",2.7,5.5,0,5,0,0.7,20.8,5,182
+"Ghana","GH2022DHS",3.1,"Total","Total",6.5,10,8.6,3.7,3.2,4,45.4,6.1,9089
+"Ghana","GH2022DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,186
+"Ghana","GH2022DHS",3.2,"Contraceptive method","Pill",10,8.8,11.4,1.9,3.6,4.3,49.7,6.8,1086
+"Ghana","GH2022DHS",0.7,"Contraceptive method","Injectables",8.6,6.9,17.1,2.2,4.4,4.2,59.6,4.8,2021
+"Ghana","GH2022DHS",0.1,"Contraceptive method","Implants",3.1,1.2,11.6,0.7,1,2.2,24.9,2.2,1428
+"Ghana","GH2022DHS",3,"Contraceptive method","Condom",5.4,23,0.8,4.8,6.8,5.3,50,8.7,604
+"Ghana","GH2022DHS",2.6,"Contraceptive method","Lactational amenorrhea",5.2,8.8,0.8,29,5.2,5.4,60.8,32.8,260
+"Ghana","GH2022DHS",4.5,"Contraceptive method","Emergency contraception",5.3,22.8,9.5,3.9,4.3,6.5,64.6,8.3,1249
+"Ghana","GH2022DHS",7.3,"Contraceptive method","Other modern methods",18.2,0,12.1,12.9,23.4,0,73.9,7.7,183
+"Ghana","GH2022DHS",6.7,"Contraceptive method","Periodic abstinence",6.7,7.4,0.1,4.8,0.8,2.5,29.4,4.9,1190
+"Ghana","GH2022DHS",6.7,"Contraceptive method","Withdrawal",4.4,17,0,6.9,2.4,4.6,42,7.4,621
+"Ghana","GH2022DHS",8,"Contraceptive method","Other traditional methods",7.9,6.1,2.7,3.6,4.4,5.4,38,3.9,261
 "Gambia","GM2013DHS",2,"Total","Total",7,1.9,7.1,1.9,2.9,5.5,28.3,4.6,946
 "Gambia","GM2013DHS",2.2,"Contraceptive method","Pill",7,3.2,6.9,1.9,6.1,9.6,36.7,6.7,289
 "Gambia","GM2013DHS",1.6,"Contraceptive method","Injectables",7,0.9,10.4,1.1,1.5,4.5,27.1,4,414
@@ -430,6 +466,19 @@
 "India","IA2015DHS",4.9,"Contraceptive method","Periodic abstinence",13.4,6.8,1.2,3.8,5.3,8.1,43.5,7.1,22164
 "India","IA2015DHS",4.6,"Contraceptive method","Withdrawal",13.6,9.4,1.6,4.1,6.1,10.3,49.8,9.7,17483
 "India","IA2015DHS",2.4,"Contraceptive method","Other traditional methods",12.7,13.7,6.3,5.8,11.5,25.7,78.2,2,83
+"India","IA2020DHS",2.9,"Total","Total",10.6,9.8,3.5,4.2,7.4,11.2,49.6,6.6,300484
+"India","IA2020DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,45695
+"India","IA2020DHS",5.2,"Contraceptive method","Male sterilization",9.8,9.1,4.1,5,7.1,20.2,60.5,20.1,756
+"India","IA2020DHS",2.4,"Contraceptive method","Pill",10.4,9.6,8.9,4.5,9,9.9,54.7,6.6,40944
+"India","IA2020DHS",1.9,"Contraceptive method","IUD",7.5,1.8,10,2.5,6.8,4.7,35.2,5.7,13857
+"India","IA2020DHS",2.9,"Contraceptive method","Injectables",10.6,13.3,9.1,7.3,11.5,11.1,65.9,8.7,5531
+"India","IA2020DHS",2.8,"Contraceptive method","Condom",14.1,11.4,3.4,3.9,11.9,13.1,60.5,5.6,91328
+"India","IA2020DHS",3.3,"Contraceptive method","Female condom",13.1,6,23.3,4.2,11.8,15.1,76.8,10.1,532
+"India","IA2020DHS",4.7,"Contraceptive method","Lactational amenorrhea",9.7,11.8,2.3,26,10.6,17,82.2,35.1,8654
+"India","IA2020DHS",1.4,"Contraceptive method","Other modern methods",9.9,7.3,7.2,1.5,8.3,9.4,45,3,460
+"India","IA2020DHS",4.7,"Contraceptive method","Periodic abstinence",12.8,14.4,1.3,4.6,6,16.6,60.4,7.6,55864
+"India","IA2020DHS",4.5,"Contraceptive method","Withdrawal",13.3,13.9,2,5.2,5,14.6,58.5,9.8,36678
+"India","IA2020DHS",6.2,"Contraceptive method","Other traditional methods",16.3,11.7,3.8,7.6,5.6,8,59.3,14.1,186
 "Indonesia","ID1991DHS",2.6,"Total","Total",5.6,0.8,10.6,1.5,2.5,4,27.6,10.6,12913
 "Indonesia","ID1991DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,220
 "Indonesia","ID1991DHS",2.6,"Contraceptive method","Pill",8.9,1.2,10.8,1.1,1,4.3,29.9,7.3,4289
@@ -590,6 +639,18 @@
 "Kenya","KE2014DHS",9.1,"Contraceptive method","Periodic abstinence",4.1,3.8,0,6.3,0.2,1.4,24.8,6.7,661
 "Kenya","KE2014DHS",8.7,"Contraceptive method","Withdrawal",11.2,0.4,1.3,3.7,2,2.3,29.6,8.4,106
 "Kenya","KE2014DHS",19.7,"Contraceptive method","Other traditional methods",20,5.6,12.6,2.4,0,1.4,61.6,2.4,52
+"Kenya","KE2022DHS",1.5,"Total","Total",5.5,5.3,8.2,6.3,2.4,1.7,34.7,8.1,11130
+"Kenya","KE2022DHS",2.5,"Contraceptive method","Pill",9.1,8.7,12.5,11.1,6.4,2,55.6,15.1,1590
+"Kenya","KE2022DHS",0,"Contraceptive method","IUD",3.4,0,4.9,0,0.5,0.1,11.3,2.8,474
+"Kenya","KE2022DHS",1.5,"Contraceptive method","Injectables",7.5,4.8,12.2,4.2,3,1.6,41.9,7.6,3593
+"Kenya","KE2022DHS",0.4,"Contraceptive method","Implants",2.3,0.4,6.4,0.8,0.4,0.5,13.4,2.5,2900
+"Kenya","KE2022DHS",1.3,"Contraceptive method","Condom",4.2,13.7,2.5,5.7,1.8,3.4,33,7,793
+"Kenya","KE2022DHS",3.2,"Contraceptive method","Lactational amenorrhea",2.6,5.9,0.4,53.7,2,4.5,73.9,42.5,314
+"Kenya","KE2022DHS",0.8,"Contraceptive method","Emergency contraception",7.6,24.4,16,10.9,7.3,3.6,71.1,9.1,283
+"Kenya","KE2022DHS",0,"Contraceptive method","Other modern methods",0,0,2.7,0,0,0,2.7,0,174
+"Kenya","KE2022DHS",5.7,"Contraceptive method","Periodic abstinence",6.6,6.8,0,8.2,0.4,2.7,31.1,5.8,676
+"Kenya","KE2022DHS",2.8,"Contraceptive method","Withdrawal",3.2,9.3,0,18.6,1.7,3.6,39.6,18.5,271
+"Kenya","KE2022DHS",0,"Contraceptive method","Other traditional methods",1.7,8.3,0,5.9,0,0,24.3,3.9,63
 "Cambodia","KH2010DHS",3.4,"Total","Total",5.8,0.8,6.4,1.7,3.2,2.3,23.6,6.4,6817
 "Cambodia","KH2010DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,181
 "Cambodia","KH2010DHS",2.2,"Contraceptive method","Pill",8.3,0.6,9.7,1.3,4.6,2.8,29.4,7.6,2354
@@ -608,6 +669,16 @@
 "Cambodia","KH2014DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,24
 "Cambodia","KH2014DHS",10.3,"Contraceptive method","Periodic abstinence",5.2,1.4,1,1.6,1.7,5.2,26.4,9.7,374
 "Cambodia","KH2014DHS",10.5,"Contraceptive method","Withdrawal",6.7,0.6,0.4,3.5,0.6,1.3,23.6,5,2202
+"Cambodia","KH2021DHS",3,"Total","Total",7.8,2.8,5.9,3.6,1.5,1.3,27.7,6.5,9502
+"Cambodia","KH2021DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,217
+"Cambodia","KH2021DHS",1.2,"Contraceptive method","Pill",8.8,2.7,6.9,1.7,1.9,1.2,26.1,4.9,3924
+"Cambodia","KH2021DHS",0.6,"Contraceptive method","IUD",4.2,0.6,6,1,0.9,0.4,14.4,3.9,636
+"Cambodia","KH2021DHS",0.6,"Contraceptive method","Injectables",8.7,3.7,15,4,2.6,1.4,43.2,11.5,1206
+"Cambodia","KH2021DHS",0.5,"Contraceptive method","Implants",5.7,1,8.1,1.6,1.7,0.4,20.1,6.3,380
+"Cambodia","KH2021DHS",0.9,"Contraceptive method","Condom",5.6,10.4,8.3,3.5,1,2.6,32.4,3.5,264
+"Cambodia","KH2021DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,157
+"Cambodia","KH2021DHS",7.3,"Contraceptive method","Periodic abstinence",4.6,2.3,0,22.7,4.4,10.1,53.2,34.9,230
+"Cambodia","KH2021DHS",7.9,"Contraceptive method","Withdrawal",8.3,2.7,0.5,6.1,0.4,1.1,27.2,5.5,2489
 "Kazakhstan","KK1999DHS",9.7,"Total","Total",2.9,3.5,5.7,8.7,4.3,3.7,38.5,16.6,3096
 "Kazakhstan","KK1999DHS",9.9,"Contraceptive method","Pill",7,5.4,21.4,8.3,9.4,2.7,64.1,30.1,374
 "Kazakhstan","KK1999DHS",3.1,"Contraceptive method","IUD",1.4,0.1,5.2,0.1,0.4,0.9,11.2,3.3,1197
@@ -671,6 +742,16 @@
 "Moldova","MB2005DHS",11.4,"Contraceptive method","Periodic abstinence",4,5,0.5,8.7,2.2,2.9,34.8,12.5,222
 "Moldova","MB2005DHS",12.9,"Contraceptive method","Withdrawal",5.1,3.6,0.5,8.2,1.6,5.2,37.1,12.1,1353
 "Moldova","MB2005DHS",5,"Contraceptive method","Other traditional methods",0,12.2,2.7,5.7,0,9.9,35.5,10.3,46
+"Madagascar","MD2021DHS",2,"Total","Total",8.5,2.2,7.6,3.9,3.1,5.5,32.9,7.9,11429
+"Madagascar","MD2021DHS",3.1,"Contraceptive method","Pill",11.8,2.3,14.9,10.9,5.1,11,59,22.7,1264
+"Madagascar","MD2021DHS",0.6,"Contraceptive method","Injectables",9.9,2.5,9.2,2.3,3.4,6,33.9,6,6084
+"Madagascar","MD2021DHS",0.1,"Contraceptive method","Implants",2.8,0.5,5.3,0.5,1.6,4.1,14.8,3,1915
+"Madagascar","MD2021DHS",2,"Contraceptive method","Condom",11.2,9.6,4.1,6.5,4.4,9.2,47,13.5,165
+"Madagascar","MD2021DHS",0.9,"Contraceptive method","Lactational amenorrhea",4.1,2.9,0.8,55.9,19.6,11.5,95.8,71.3,130
+"Madagascar","MD2021DHS",0,"Contraceptive method","Other modern methods",0,0,25.9,0,0,0,25.9,0,294
+"Madagascar","MD2021DHS",8.9,"Contraceptive method","Periodic abstinence",7.8,2.2,0,4.7,0.9,0.7,25.3,4.5,1290
+"Madagascar","MD2021DHS",9.1,"Contraceptive method","Withdrawal",15.3,4.7,0,5.2,4.4,2.3,41,6.8,243
+"Madagascar","MD2021DHS",6.4,"Contraceptive method","Other traditional methods",8.2,0,1.5,2.6,0,2.4,21.1,1.9,44
 "Mali","ML2012DHS",4.7,"Total","Total",13.8,2.3,10.3,3,2,8.5,44.5,3.4,1677
 "Mali","ML2012DHS",5.7,"Contraceptive method","Pill",17,2.6,10.3,2.4,3,7.3,48.3,4.4,544
 "Mali","ML2012DHS",5.6,"Contraceptive method","Injectables",14.6,2.4,14.3,3.2,1.5,9.1,50.8,3.5,633
@@ -688,6 +769,12 @@
 "Myanmar","MM2016DHS",1,"Contraceptive method","Injectables",9.7,4.2,16.2,4.7,2.7,3,41.5,11.6,3674
 "Myanmar","MM2016DHS",32.3,"Contraceptive method","Other modern methods",0.4,0.9,0.6,0,0,0,34.3,0.6,202
 "Myanmar","MM2016DHS",17.3,"Contraceptive method","Other traditional methods",2,0,0,8.3,0,9.3,36.9,8.3,72
+"Mauritania","MR2020DHS",2.9,"Total","Total",9.9,14.6,13.5,2.1,3.7,7,53.7,3.3,3031
+"Mauritania","MR2020DHS",2.9,"Contraceptive method","Pill",11.7,16.2,13.4,1.8,4.1,6.6,56.8,2.1,1642
+"Mauritania","MR2020DHS",1.7,"Contraceptive method","Injectables",7.7,10.8,22,1.6,4.9,11.4,60.1,4.3,623
+"Mauritania","MR2020DHS",0,"Contraceptive method","Implants",3.9,10.8,14.4,2,0.8,1.3,33.2,6.2,329
+"Mauritania","MR2020DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,107
+"Mauritania","MR2020DHS",7.5,"Contraceptive method","Withdrawal",9.9,19.7,0.7,4.1,2.1,7.7,51.7,3.7,313
 "Maldives","MV2009DHS",3.2,"Total","Total",7.4,2.9,6.2,1.4,1.4,9.5,32.1,4.9,2794
 "Maldives","MV2009DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,316
 "Maldives","MV2009DHS",2.7,"Contraceptive method","Pill",4,3.9,13.3,1.8,0.7,10.9,37.4,6.8,481
@@ -723,6 +810,14 @@
 "Mozambique","MZ2011DHS",2.3,"Contraceptive method","Condom",7.2,7.2,2.3,3.7,1.5,14.8,39,3.5,598
 "Mozambique","MZ2011DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,66.1,66.1,0.8,103
 "Mozambique","MZ2011DHS",0,"Contraceptive method","Other traditional methods",0,0,0,0,0,19.3,19.3,0,42
+"Mozambique","MZ2022DHS",0.7,"Total","Total",9.2,3.8,5.3,2.7,1.5,8.8,35.5,4.2,4902
+"Mozambique","MZ2022DHS",2.1,"Contraceptive method","Pill",9.8,4.9,6.2,4.1,1.7,9.1,41.7,6.4,846
+"Mozambique","MZ2022DHS",0,"Contraceptive method","IUD",15.1,0,9.2,2.6,0,6.1,35.3,9.6,163
+"Mozambique","MZ2022DHS",0.2,"Contraceptive method","Injectables",12.5,4.9,7.1,1.3,2.3,11.5,44.6,2.8,2143
+"Mozambique","MZ2022DHS",0,"Contraceptive method","Implants",3.1,0.8,4,0.6,0.5,3.7,15.7,2,971
+"Mozambique","MZ2022DHS",0.3,"Contraceptive method","Condom",5.2,6.2,0.4,9.7,0.6,9,31.5,9.2,553
+"Mozambique","MZ2022DHS",0,"Contraceptive method","Other modern methods",0,0,0,0,0,0,0,0,73
+"Mozambique","MZ2022DHS",2.6,"Contraceptive method","Other traditional methods",11,0,0,0,0,12.7,26.3,0,154
 "Nicaragua","NC1998DHS",4.5,"Total","Total",5.8,2.3,13.7,3.6,2.2,7.6,39.7,15.2,7876
 "Nicaragua","NC1998DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,1259
 "Nicaragua","NC1998DHS",6.5,"Contraceptive method","Pill",8.9,3.6,18.6,2.7,2.1,6.8,49.2,13.1,3017
@@ -785,6 +880,14 @@
 "Nepal","NP2016DHS",2.7,"Contraceptive method","Condom",10.7,41.8,1,4.2,5.3,3.2,68.9,8.9,1072
 "Nepal","NP2016DHS",13.4,"Contraceptive method","Periodic abstinence",12,25.5,0,4.6,0,0.3,55.8,4.1,208
 "Nepal","NP2016DHS",4.1,"Contraceptive method","Withdrawal",6.9,45.3,0,5.1,0.8,0.5,62.6,5.5,1680
+"Nepal","NP2022DHS",2.5,"Total","Total",5,27.2,5.9,3.5,1.1,0.8,48.7,7.6,8425
+"Nepal","NP2022DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,365
+"Nepal","NP2022DHS",3.2,"Contraceptive method","Pill",4.1,42,10.5,2.6,1.9,1,67.2,8.9,1380
+"Nepal","NP2022DHS",0.7,"Contraceptive method","Injectables",3.9,28.3,12.2,3.2,1,0.7,58.6,11.9,2242
+"Nepal","NP2022DHS",0,"Contraceptive method","Implants",0.2,1.6,5.7,0,0.2,0.2,10.3,3.7,778
+"Nepal","NP2022DHS",2.3,"Contraceptive method","Condom",10.5,34.8,0.5,6,3.3,2.2,59.6,8.2,1001
+"Nepal","NP2022DHS",2.4,"Contraceptive method","Periodic abstinence",6.6,10.4,0,4.1,0,1,24.6,3.6,231
+"Nepal","NP2022DHS",5.2,"Contraceptive method","Withdrawal",7.3,30.2,0.1,4.7,0.2,0.5,48.2,4.7,2189
 "Peru","PE1992DHS",14.8,"Total","Total",5.4,3.3,9.2,5.6,3.1,5.7,47.2,17.8,10957
 "Peru","PE1992DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,310
 "Peru","PE1992DHS",4,"Contraceptive method","Pill",6,4.9,28.7,2,3.1,7.8,56.4,27.2,1726
@@ -921,6 +1024,16 @@
 "Philippines","PH2003DHS",12.5,"Contraceptive method","Periodic abstinence",4.4,1.9,1.7,4.2,1.5,5.6,31.8,7.8,822
 "Philippines","PH2003DHS",17.2,"Contraceptive method","Withdrawal",5.6,1.8,2.8,5.7,2.3,8.3,43.9,11.1,1303
 "Philippines","PH2003DHS",13.3,"Contraceptive method","Other traditional methods",5.7,0,2.5,3,4.2,7.3,36,11.3,77
+"Philippines","PH2022DHS",4.1,"Total","Total",4.7,4.7,9.1,4.4,2.4,2,32.9,9.9,10002
+"Philippines","PH2022DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,447
+"Philippines","PH2022DHS",3.4,"Contraceptive method","Pill",5.6,7,12.5,2.3,2.4,2.1,36.2,7.2,3620
+"Philippines","PH2022DHS",1.5,"Contraceptive method","IUD",1,1.3,11,1,0,1.1,17.2,5.2,317
+"Philippines","PH2022DHS",1.7,"Contraceptive method","Injectables",4.4,2.7,24.1,4.4,4.4,1.5,46,19.7,1242
+"Philippines","PH2022DHS",0.7,"Contraceptive method","Implants",0.3,0.4,4.6,0.3,0.6,1,9.7,4,629
+"Philippines","PH2022DHS",3.1,"Contraceptive method","Condom",4.5,9,2.6,5.4,6.7,4.4,36.6,9.6,524
+"Philippines","PH2022DHS",5.8,"Contraceptive method","Lactational amenorrhea",0.9,3.2,0.8,40.8,4.3,6,80.8,59.2,325
+"Philippines","PH2022DHS",4.4,"Contraceptive method","Periodic abstinence",6.8,2.9,1.2,0.7,0.4,0.4,16.8,3.8,388
+"Philippines","PH2022DHS",8.1,"Contraceptive method","Withdrawal",6.1,4.4,3.2,5.6,1.8,1.8,31.2,7.6,2486
 "Pakistan","PK2012DHS",5.5,"Total","Total",9.1,2.3,10.4,2.1,2.2,5.5,37.1,7.6,7146
 "Pakistan","PK2012DHS",0,"Contraceptive method","Female sterilization",0,0,0,0,0,0,0,0,513
 "Pakistan","PK2012DHS",6.4,"Contraceptive method","Pill",8.8,4.6,31.2,1.5,1.3,2.6,56.4,13.8,583
@@ -1130,6 +1243,15 @@
 "Tanzania","TZ2015DHS",8,"Contraceptive method","Periodic abstinence",5.4,0.6,0.2,3.1,0.7,1.3,19.5,4.4,661
 "Tanzania","TZ2015DHS",10.1,"Contraceptive method","Withdrawal",2.1,1.5,0.2,17.6,0.6,0.1,32.1,17.8,348
 "Tanzania","TZ2015DHS",11.4,"Contraceptive method","Other traditional methods",0,1.3,2.1,0.8,0,3,18.7,1.9,89
+"Tanzania","TZ2022DHS",1.3,"Total","Total",9.2,1.7,8,3.1,2,3.1,34,3.6,7227
+"Tanzania","TZ2022DHS",2,"Contraceptive method","Pill",10.8,2.2,11.4,7.3,3.2,3,44.3,4.9,545
+"Tanzania","TZ2022DHS",1.1,"Contraceptive method","Injectables",12.6,2.4,13,3.8,3.6,4.1,49.6,5.1,2203
+"Tanzania","TZ2022DHS",0.3,"Contraceptive method","Implants",6.2,0.4,7.8,0.8,0.6,1.3,21.6,1.4,2529
+"Tanzania","TZ2022DHS",1.3,"Contraceptive method","Condom",12.1,5,2.3,5.8,2.3,8.5,37.3,7.5,359
+"Tanzania","TZ2022DHS",2.8,"Contraceptive method","Lactational amenorrhea",2.5,0.4,0,6.4,3,1.2,58.7,13.5,176
+"Tanzania","TZ2022DHS",3.9,"Contraceptive method","Periodic abstinence",10.2,2,0.3,2.2,1.1,4.9,25.4,1.2,705
+"Tanzania","TZ2022DHS",3.8,"Contraceptive method","Withdrawal",9.5,2,0,8.7,1.9,4.7,32.1,6.1,340
+"Tanzania","TZ2022DHS",6.1,"Contraceptive method","Other traditional methods",6.6,3.3,0,3.5,1.2,0,20.6,2.3,91
 "Ukraine","UA2007DHS",4.1,"Total","Total",2.6,3.6,1.7,3.7,2.1,5.3,23.1,10.7,3964
 "Ukraine","UA2007DHS",2.4,"Contraceptive method","Pill",0.9,2.7,14.3,0.2,2.6,2.2,25.3,15,372
 "Ukraine","UA2007DHS",0.5,"Contraceptive method","IUD",0,0.1,0.3,0,0.4,0.1,1.4,0.8,579
@@ -1261,6 +1383,7 @@
 "Maldives","MV2009DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,132
 "Malawi","MW2004DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,61
 "Nepal","NP2016DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,177
+"Nepal","NP2022DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,235
 "Peru","PE2007DHS",NA,"Contraceptive method","Lactational amenorrhea",NA,NA,NA,NA,NA,NA,NA,NA,489
 "Peru","PE2007DHS",NA,"Contraceptive method","Emergency contraception",NA,NA,NA,NA,NA,NA,NA,NA,267
 "Peru","PE2010DHS",NA,"Contraceptive method","Lactational amenorrhea",NA,NA,NA,NA,NA,NA,NA,NA,255
@@ -1271,6 +1394,7 @@
 "Senegal","SN2014DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,198
 "Senegal","SN2019DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,238
 "Timor-Leste","TL2016DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,137
+"Tanzania","TZ2022DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,278
 "Vietnam","VN1997DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,42
 "Vietnam","VN2002DHS",NA,"Contraceptive method","Other modern methods",NA,NA,NA,NA,NA,NA,NA,NA,143
 "South Africa","ZA2016DHS",NA,"Contraceptive method","Other traditional methods",NA,NA,NA,NA,NA,NA,NA,NA,24

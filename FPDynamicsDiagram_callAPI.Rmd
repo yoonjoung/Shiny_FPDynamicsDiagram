@@ -25,70 +25,70 @@ library(dplyr)
 library(data.table)
 
 # Call 10 indicators (9 columns + the denominator)  
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_PRG&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_PRG&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)   
 FP_DISR_W_PRG<- dta %>% rename(FP_DISR_W_PRG=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_DES&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_DES&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_DES<- dta %>% rename(FP_DISR_W_DES=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_FRT&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_FRT&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_FRT<- dta %>% rename(FP_DISR_W_FRT=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SID&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SID&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_SID<- dta %>% rename(FP_DISR_W_SID=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_WME&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_WME&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_WME<- dta %>% rename(FP_DISR_W_WME=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_MET&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_MET&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_MET<- dta %>% rename(FP_DISR_W_MET=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_OTH&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_OTH&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_OTH<- dta %>% rename(FP_DISR_W_OTH=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_ANY&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_ANY&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_ANY<- dta %>% rename(FP_DISR_W_ANY=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SWH&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_SWH&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
             CharacteristicCategory, CharacteristicLabel)
 FP_DISR_W_SWH<- dta %>% rename(FP_DISR_W_SWH=Value)
 
-url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_NUM&breakdown=all&perpage=10000&APIkey=USAAID-113824")
+url<-("http://api.dhsprogram.com/rest/dhs/data?f=json&indicatorIds=FP_DISR_W_NUM&breakdown=all&perpage=50000&APIkey=USAAID-113824")
 jsondata<-fromJSON(url) 
 dta<-data.table(jsondata$Data)
 dta<-select(dta, CountryName, SurveyId, Value, 
