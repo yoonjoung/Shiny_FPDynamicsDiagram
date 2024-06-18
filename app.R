@@ -198,7 +198,7 @@ dta<-dta %>%
 
 dta<-arrange(dta, country, order)
 countrylist<-unique(as.vector(dta$country))
-
+obs<-length(unique(dta$country))
 
 #******************************
 # 1. USER INTERFACE 
@@ -231,7 +231,13 @@ ui<-fluidPage(
         mainPanel(
             h4("Throughout a woman's life, her use of contraceptive methods keeps changing - in other words,",strong("it is dynamic.")),
             
-            h4("The interactive diagram below shows",strong("contraceptive continuation, switching, and discontinuation"), "over time, based on 'twelve-month discontinuation rates' from",a("Demographic and Health Surveys", href="https://www.dhsprogram.com/"),"conducted in 62 countries."),
+            h4("The interactive diagram below shows",
+               strong("contraceptive continuation, switching, and discontinuation"), 
+               "over time, based on 'twelve-month discontinuation rates' from",
+               a("Demographic and Health Surveys", href="https://www.dhsprogram.com/"),
+               "conducted in",
+               obs,
+               "countries."),
 
             hr(),
             h4("To get started",strong("select a country on the left.")),
@@ -282,7 +288,7 @@ ui<-fluidPage(
             
             hr(),
             h6("Application initially published on June 27, 2019."),
-            h6("DHS API data last accessed and the application updated on: January 24, 2022."),
+            h6("DHS API data last accessed and the application updated on: June 18, 2024."),
 
             hr(),
             h6(span("For more information on the calendar data in DHS, discontinuation tabulation, and the diagram, please", a("see here.", href="http://rpubs.com/YJ_Choi/FPDynamicsData"), style = "color:gray")),
